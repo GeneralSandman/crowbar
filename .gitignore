@@ -1,1 +1,3 @@
 *.o
+crowbar
+crowbar_v0.1/bin/*

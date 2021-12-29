@@ -4,6 +4,9 @@
 #include "DBG.h"
 #include "crowbar.h"
 
+// gcc 编译的时候 忽略 -Wsometimes-uninitialized warning
+// #pragma GCC diagnostic ignored "-Wsometimes-uninitialized"
+
 static CRB_Interpreter *st_current_interpreter;
 
 CRB_Interpreter *
