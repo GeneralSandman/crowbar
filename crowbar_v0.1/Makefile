@@ -17,12 +17,21 @@ OBJS = \
   ./memory/mem.o\
   ./debug/dbg.o
 CFLAGS = -c -g -Wall -Wswitch-enum -ansi -pedantic -DDEBUG
+# 存放bin文件的目录
+BIN = ./bin
 INCLUDES = \
+
+
+#如果存放二进制文件的目录不存在，则创建
+# $(OBJPATH):
+# 	mkdir -p $(OBJPATH)
 
 $(TARGET):$(OBJS)
 	cd ./memory; $(MAKE);
 	cd ./debug; $(MAKE);
-	$(CC) $(OBJS) -o $@ -lm
+  # mkdir -p $(BIN);
+	$(CC) $(OBJS) -o $(BIN)/$@ -lm
+
 clean:
 	rm -f *.o lex.yy.c y.tab.c y.tab.h *~
 y.tab.h : crowbar.y
