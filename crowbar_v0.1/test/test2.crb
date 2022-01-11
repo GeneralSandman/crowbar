@@ -1,0 +1,15 @@
+############################################################
+# Check lexical analyzer
+############################################################
+# comment
+
+gtest = 10;
+
+function gtestfunc(a) {
+    global gtest;
+    gtest = a;
+    print(gtest);
+}
+
+gtestfunc(123456);
+print(gtest);
