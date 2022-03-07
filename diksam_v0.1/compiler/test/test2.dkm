@@ -1,7 +1,0 @@
-int print(string str);
-int println(string str) {
-    print(str + "\n");
-}
-
-print("ass-");
-println("asd");
